@@ -1,3 +1,4 @@
+import sys
 import polars as pl
 
 match sys.argv:
