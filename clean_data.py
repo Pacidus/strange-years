@@ -1,7 +1,3 @@
-import io
-import sys
-import glob
-import numpy as np
 import polars as pl
 
 match sys.argv:
@@ -109,13 +105,3 @@ df.collect_schema()
 print("Reading and writting file")
 
 df.sink_parquet("all_décès.parquet", maintain_order=False)
-
-# b = "█"
-# w = " "
-# L = 70
-# for i, filename in enumerate(list_file):
-#     l = int(L * i / Nfile)
-#     print(f"|{b*l}{w*(L-l)}|{i/Nfile:6.1%} {filename}", end="\r")
-
-# print(f"|{b*L}|{1:6.1%}")
-# print("Données netoyés")

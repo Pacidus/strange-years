@@ -10,13 +10,15 @@ match sys.argv:
     case ["download_data.py"]:
         folder = "./"
 
+# API to recover data
 api = "https://www.data.gouv.fr/api/2/datasets"
 idata = "5de8f397634f4164071119c5"
 apir = "resources"
 
+# Progress bar parameters
 b = "█"
 w = " "
-L = 70
+L = 50
 
 def write(file, text):
     with open(file, "w") as fwt:
