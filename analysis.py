@@ -30,7 +30,7 @@ def fig_histogram(Born, Death):
     ax2.set_xlabel("Year")
     return fig
 
-def fig_2Dhist(Born, Death, X, Y, count):
+def fig_2Dhist(Born, Death, X, Y, count, kwargs=dict()):
     Yn, Nn = Born
     Yd, Nd = Death
     kwargs = {
@@ -55,7 +55,7 @@ def fig_2Dhist(Born, Death, X, Y, count):
     ax2.bar(Yn, Nn, 1, color="#559")
     ax3.barh(Yd, Nd, 1, color="#644")
 
-    cm = ax1.pcolor(X, Y, count, cmap="nipy_spectral")
+    cm = ax1.pcolor(X, Y, count, cmap="nipy_spectral", **kwargs)
     ax1.set_xlim(1891, 2023)
     ax1.set_ylim(1972, 2023)
 
@@ -109,15 +109,24 @@ data = df.select([
     
 ]).collect()
 
+
+
 ##################
-## Computations ##
+## Plot figures ##
 ##################
 
+
+# Death Birth comparaison without gender
 yd = data["Date_décès"].dt.year()
 yn = data["Date_naissance"].dt.year()
 Death = np.unique(yd, return_counts=True)
 Born = np.unique(yn, return_counts=True)
 
+fig = fig_histogram(Born, Death)
+fig.savefig("figures/year_dist.svg")
+plt.show()
+
+# 2D distributions
 md = yd.min()
 mn = yn.min()
 D = (yd - md).to_numpy()
@@ -127,14 +136,56 @@ count = np.bincount(D + N*rd,  minlength=rn*rd)
 count = count.reshape(rn, rd).T
 X, Y = np.arange(mn, mn+rn+1) - 0.5, np.arange(md, md+rd+1) - 0.5
 
-##################
-## Plot figures ##
-##################
-
-fig = fig_histogram(Born, Death)
-fig.savefig("figures/year_dist.svg")
-plt.show()
-
 fig = fig_2Dhist(Born, Death, X, Y, count)
 fig.savefig("figures/year_dist_2D.svg")
+plt.show()
+
+# Death Birth comparaison for male
+dta = data.filter(pl.col("Sexe") ==1)
+yd = dta["Date_décès"].dt.year()
+yn = dta["Date_naissance"].dt.year()
+Death = np.unique(yd, return_counts=True)
+Born = np.unique(yn, return_counts=True)
+
+fig = fig_histogram(Born, Death)
+fig.savefig("figures/M_year_dist.svg")
+plt.show()
+
+# 2D distributions
+md = yd.min()
+mn = yn.min()
+D = (yd - md).to_numpy()
+N = (yn - mn).to_numpy()
+rd, rn = D.max() + 1, N.max() + 1
+count = np.bincount(D + N*rd,  minlength=rn*rd)
+count = count.reshape(rn, rd).T
+X, Y = np.arange(mn, mn+rn+1) - 0.5, np.arange(md, md+rd+1) - 0.5
+
+fig = fig_2Dhist(Born, Death, X, Y, count)
+fig.savefig("figures/M_year_dist_2D.svg")
+plt.show()
+
+# Death Birth comparaison for female
+dta = data.filter(pl.col("Sexe") == 2)
+yd = dta["Date_décès"].dt.year()
+yn = dta["Date_naissance"].dt.year()
+Death = np.unique(yd, return_counts=True)
+Born = np.unique(yn, return_counts=True)
+
+fig = fig_histogram(Born, Death)
+fig.savefig("figures/F_year_dist.svg")
+plt.show()
+
+# 2D distributions
+md = yd.min()
+mn = yn.min()
+D = (yd - md).to_numpy()
+N = (yn - mn).to_numpy()
+rd, rn = D.max() + 1, N.max() + 1
+count = np.bincount(D + N*rd,  minlength=rn*rd)
+count = count.reshape(rn, rd).T
+X, Y = np.arange(mn, mn+rn+1) - 0.5, np.arange(md, md+rd+1) - 0.5
+
+fig = fig_2Dhist(Born, Death, X, Y, count)
+fig.savefig("figures/F_year_dist_2D.svg")
 plt.show()
