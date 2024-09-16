@@ -57,25 +57,9 @@ df = df.with_columns(
 df = df.with_columns(
     [
         pl.col("nn").list.get(-2, null_on_oob=True).alias("Noms"),
-        (pl.col("nn").list.get(-1).str.split(" ").alias("Prenoms")),
+        pl.col("nn").list.get(-1).str.split(" ").alias("Prenoms"),
     ]
 ).drop("nn")
-
-
-def repair(name):
-    col = pl.col(name)
-    col = pl.when(col.str.len_chars() == 0).then(pl.lit("19700101"))
-    Y = col.str.slice(0, 4)
-    m = col.str.slice(4, 2).cast(pl.UInt8)
-    d = col.str.slice(6, 2).cast(pl.UInt8)
-    m = pl.when(m == 0).then(pl.lit(1))
-    m = pl.when(m >= 13).then(pl.lit(12))
-    d = pl.when(m == 2, d >= 29).then(pl.lit(28))
-    d = pl.when(m >= 1, d >= 31).then(pl.lit(30))
-    d = pl.when(d == 0).then(pl.lit(1))
-    m = m.cast(pl.String).str.zfill(2)
-    d = d.cast(pl.String).str.zfill(2)
-    return (Y + m + d).str.to_date("%Y%m%d")
 
 
 df = df.select(
@@ -84,20 +68,54 @@ df = df.select(
         "Prenoms",
         pl.col("sexe").cast(pl.UInt8).alias("Sexe"),
         pl.col("date naissance")
+        .str.pad_end(8, "0")
         .str.to_date("%Y%m%d", strict=False)
-        .fill_null(repair("date naissance"))
         .alias("Date_naissance"),
         pl.col("code location naissance").alias("Code_location_naissance"),
         pl.col("commune naissance").alias("Commune_naissance"),
         pl.col("pays naissance").alias("Pays_naissance"),
         pl.col("date décès")
+        .str.pad_end(8, "0")
         .str.to_date("%Y%m%d", strict=False)
-        .fill_null(repair("date décès"))
         .alias("Date_décès"),
         pl.col("code location décès").alias("Code_location_décès"),
         pl.col("numéro acte décès").alias("Numéro_acte_décès"),
+        pl.col("date décès").str.pad_end(8, "0"),
+        pl.col("date naissance").str.pad_end(8, "0"),
     ]
 )
+
+
+def repair(name):
+    col = pl.col(name)
+    Y = col.str.slice(0, 4)
+    m = col.str.slice(4, 2).cast(pl.UInt8)
+    d = col.str.slice(6, 2).cast(pl.UInt8)
+    m = pl.when(m == 0).then(pl.lit(1)).otherwise(m)
+    m = pl.when(m >= 13).then(pl.lit(12)).otherwise(m)
+    d = pl.when(m == 2, d >= 29).then(pl.lit(28)).otherwise(d)
+    d = pl.when(m != 2, d >= 31).then(pl.lit(30)).otherwise(d)
+    d = pl.when(d == 0).then(pl.lit(1)).otherwise(d)
+    m = m.cast(pl.String).str.zfill(2)
+    d = d.cast(pl.String).str.zfill(2)
+    return (Y + m + d).str.to_date("%Y%m%d")
+
+
+Dn = pl.col("Date_naissance").is_null()
+Dd = pl.col("Date_décès").is_null()
+
+df = df.with_columns(
+    [
+        pl.when(Dn)
+        .then(repair("date naissance"))
+        .otherwise("Date_naissance")
+        .alias("Date_naissance"),
+        pl.when(Dd)
+        .then(repair("date décès"))
+        .otherwise("Date_décès")
+        .alias("Date_décès"),
+    ]
+).drop(["date décès", "date naissance"])
 
 print("Resolving schema")
 

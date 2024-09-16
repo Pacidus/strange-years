@@ -20,15 +20,18 @@ b = "█"
 w = " "
 L = 50
 
+
 def write(file, text):
     with open(file, "w") as fwt:
         fwt.write(text)
+
 
 def download(year, url):
     file = f"{folder}/{year}.txt"
     get = requests.get(url)
     write(file, get.text)
     return int(year)
+
 
 print(f"Les fichiers seronts stockées dans '{folder}'.")
 
@@ -54,7 +57,7 @@ for i, data in enumerate(rdata):
 print(f"Nombre d'années complètes: {nres}.")
 
 to_download = sorted(to_download)
-years = [i for i,j in to_download]
+years = [i for i, j in to_download]
 y0 = int(years[0])
 where = ["0"] * nres
 done = 0
@@ -66,7 +69,7 @@ with ThreadPoolExecutor(max_workers=Mth) as executor:
         y = years["".join(where).find("0")]
         done += 1
         l = int(L * done / nres)
-        string = f"|{b*l}{w*(L-l)}|{done/nres:6.1%} {done}/{nres} {y}" 
+        string = f"|{b*l}{w*(L-l)}|{done/nres:6.1%} {done}/{nres} {y}"
         print(string, end="\r")
 
 print(f"|{b*L}|{1:6.1%}")
