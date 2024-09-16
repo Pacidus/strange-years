@@ -4,13 +4,19 @@ We recover thoses data using the api of the [data.gouv.fr](https://www.data.gouv
 
 # Brief overview of the dataset
 !["Distribution of the years of birth and death in the dataset"](figures/year_dist.svg)
+*image_caption*
 
 !["Distribution of the years of birth and death for the male"](figures/M_year_dist.svg)
+*image_caption*
 
 !["Distribution of the years of birth and death for the female"](figures/F_year_dist.svg)
+*image_caption*
 
 !["Distributions of year of death given the year of birth"](figures/year_dist_2D.svg)
+*image_caption*
 
 !["Distributions of year of death given the year of birth for the male"](figures/M_year_dist_2D.svg)
+*image_caption*
 
 !["Distributions of year of death given the year of birth for the female"](figures/F_year_dist_2D.svg)
+*image_caption*
