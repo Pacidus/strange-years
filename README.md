@@ -25,42 +25,49 @@ world wars in numbers of births during the periods 1915-1919 and
 1940-1945.
 
 <figure id="fig:dist">
-<img src="figures/year_dist.svg"
+<img src="figures/year_dist.svg" style="height:10.0%"
 alt="Figure 1: Distribution of the years of birth and death in the dataset" />
 <figcaption aria-hidden="true">Figure 1: Distribution of the years of
 birth and death in the dataset</figcaption>
 </figure>
 
 <figure id="fig:M_dist">
-<img src="figures/M_year_dist.svg"
+<img src="figures/M_year_dist.svg" style="height:10.0%"
 alt="Figure 2: Distribution of the years of birth and death for the male" />
 <figcaption aria-hidden="true">Figure 2: Distribution of the years of
 birth and death for the male</figcaption>
 </figure>
 
 <figure id="fig:F_dist">
-<img src="figures/F_year_dist.svg"
+<img src="figures/F_year_dist.svg" style="height:10.0%"
 alt="Figure 3: Distribution of the years of birth and death for the female" />
 <figcaption aria-hidden="true">Figure 3: Distribution of the years of
 birth and death for the female</figcaption>
 </figure>
 
+We can also see the link between the birth year and the year of death,
+in the figures figs. 4-6. Thoses figures show a line when the year of
+birth match the year of death, we can easily understand that infant
+mortality is the cause of of that structure in the figure. Another
+interesting aspect that is highlighted by this figure is the presence of
+a
+
 <figure id="fig:2D_dist">
-<img src="figures/year_dist_2D.svg"
+<img src="figures/year_dist_2D.svg" style="height:25.0%"
 alt="Figure 4: Distributions of year of death given the year of birth" />
 <figcaption aria-hidden="true">Figure 4: Distributions of year of death
 given the year of birth</figcaption>
 </figure>
 
 <figure id="fig:M_2D_dist">
-<img src="figures/M_year_dist_2D.svg"
+<img src="figures/M_year_dist_2D.svg" style="height:25.0%"
 alt="Figure 5: Distributions of year of death given the year of birth for the male" />
 <figcaption aria-hidden="true">Figure 5: Distributions of year of death
 given the year of birth for the male</figcaption>
 </figure>
 
 <figure id="fig:F_2D_dist">
-<img src="figures/F_year_dist_2D.svg"
+<img src="figures/F_year_dist_2D.svg" style="height:25.0%"
 alt="Figure 6: Distributions of year of death given the year of birth for the female" />
 <figcaption aria-hidden="true">Figure 6: Distributions of year of death
 given the year of birth for the female</figcaption>
