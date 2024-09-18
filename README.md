@@ -1,8 +1,41 @@
-# Strange years
+# Strange Years
 
-Here we parse and analyse the french “Deceased persons file” from the
-[INSEE](https://www.insee.fr) database. We recover thoses datasets using
-the api of the [data.gouv.fr](https://www.data.gouv.fr) website.
+This project involves parsing and analysing the French “Deceased Persons
+File” from the [INSEE](https://www.insee.fr) database. We retrieved
+these datasets using the API from the
+[data.gouv.fr](https://www.data.gouv.fr) website.
+
+## Introduction
+
+This project is the culmination of a series of analyses that began
+during the second lockdown in France, from 30 October to 15 December
+2020. It initially stemmed from a casual discussion regarding the
+various arguments against the implementation of public health measures.
+The argument that led us to examine the data was as follows:
+
+> **“The excess mortality during the COVID-19 pandemic is comparable to
+> the cold epidemics of previous years in France, which did not require
+> lockdown measures. The response to COVID-19 is, therefore, at the very
+> least, an overreaction.”**
+
+Following this discussion, we decided to use the skills we acquired
+during our physics studies to test this claim using data. However, as we
+experimented with different data analysis and visualisation methods,
+what started as a playful inquiry soon evolved into something much more
+profound than the initial question we had set out to answer. New
+questions arose, and the following is the result of these explorations.
+
+This work is the product of discussions, aesthetic choices, and both
+insightful and less relevant observations. It is a work focused on
+questions, more than answers.
+
+> **“There are naive questions, tedious questions, ill-phrased
+> questions, questions put forth after inadequate self-criticism. But
+> every question is a cry to understand the world. There is no such
+> thing as a dumb question.”**
+>
+> — *Carl Sagan, The Demon-Haunted World: Science as a Candle in the
+> Dark*
 
 ## Brief overview of the dataset
 
@@ -49,8 +82,9 @@ We can also see the link between the birth year and the year of death,
 in the figures figs. 4-6. Thoses figures show a line when the year of
 birth match the year of death, we can easily understand that infant
 mortality is the cause of of that structure in the figure. Another
-interesting aspect that is highlighted by this figure is the presence of
-a
+interesting aspect is highlighted by the presence of a “mount of death”,
+nothing new about the fact that most of the population tend to die “old”
+but the dynamic of this mount is
 
 <figure id="fig:2D_dist">
 <img src="figures/year_dist_2D.svg" style="height:25.0%"

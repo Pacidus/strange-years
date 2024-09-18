@@ -67,10 +67,15 @@ def fig_histogram(dta):
 
 
 def fig_2Dhist(dta, kw=dict()):
+    if "cmap" not in kw:
+        kw["cmap"] = "nipy_spectral"
+    if "rasterized" not in kw:
+        kw["crasterized"] = True
+
     year = recover_year(dta)
     Yn, Nn = year["Born"]
     Yd, Nd = year["Death"]
-
+    
     md = Yd[0]
     mn = Yn[0] 
 
@@ -88,8 +93,9 @@ def fig_2Dhist(dta, kw=dict()):
     ax2.bar(Yn, Nn, 1, color="#559")
     ax3.barh(Yd, Nd, 1, color="#644")
 
-    X, Y = np.arange(mn, mn + rn + 1) - 0.5, np.arange(md, md + rd + 1) - 0.5
-    cm = ax1.pcolor(X, Y, count, cmap="nipy_spectral", **kw)
+    X, Y = np.arange(mn, mn + rn + 1) - 0.5, np.arange(md, md + rd + 1) -0.5
+    cm = ax1.pcolormesh(X, Y, count, , **kw)
+
     ax1.set_xlim(1891, 2023)
     ax1.set_ylim(1972, 2023)
 
