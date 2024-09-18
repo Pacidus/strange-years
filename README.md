@@ -56,11 +56,6 @@ have inspired so many minds. Your first question, which started it all,
 along with your enthusiasm, incisive insights, and kindness, have been
 invaluable to this project.
 
-Here’s a corrected and rephrased version of the **“Brief overview of the
-dataset”** section in British English:
-
-------------------------------------------------------------------------
-
 ## Brief Overview of the Dataset
 
 The dataset contains the following fields:
