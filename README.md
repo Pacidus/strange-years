@@ -51,7 +51,7 @@ to the association whose name resonates in so many ways within this
 work: **CurieOsity**, whose name intriguingly fits so well with the
 spirit of this paper.
 
-Finally, thank you *Guillaume Beaujard*, whose curiosity and questions
+Finally, thank you **Guillaume Beaujard**, whose curiosity and questions
 have inspired so many minds. Your first question, which started it all,
 along with your enthusiasm, incisive insights, and kindness, have been
 invaluable to this project.
