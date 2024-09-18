@@ -11,13 +11,41 @@ import matplotlib.pyplot as plt
 def recover_year(dta):
     yd = dta["Date_décès"].dt.year()
     yn = dta["Date_naissance"].dt.year()
-    Death = np.unique(yd, return_counts=True)
-    Born = np.unique(yn, return_counts=True)
-    return Born, Death
 
+    year = {
+        "Death" : np.unique(yd, return_counts=True),
+        "Born" : np.unique(yn, return_counts=True),
+        "data_d" : yd.to_numpy(),
+        "data_n" : yn.to_numpy(),
+    }
+    return year
+
+def plot_2D(fig): 
+    kwargs = {
+        "frameon": False,
+        "xmargin": 0,
+        "ymargin": 0,
+    }
+
+    ax1 = fig.add_axes((0.1, 0.1, 0.7, 0.7))
+    ax1.set_xlabel("Birth year")
+    ax1.set_ylabel("Death year")
+    ax2 = fig.add_axes((0.1, 0.8, 0.7, 0.18), sharex=ax1, **kwargs)
+    ax3 = fig.add_axes((0.8, 0.1, 0.1, 0.7), sharey=ax1, **kwargs)
+    ax4 = fig.add_axes((0.91, 0.1, 0.02, 0.7))
+
+    plt.setp(ax2.get_xticklabels(), visible=False)
+    plt.setp(ax2.get_yticklabels(), visible=False)
+    plt.setp(ax3.get_xticklabels(), visible=False)
+    plt.setp(ax3.get_yticklabels(), visible=False)
+    
+    return ax1, ax2, ax3, ax4
 
 def fig_histogram(dta):
-    Born, Death = recover_year(dta)
+    year = recover_year(dta)
+
+    Yn, Nn = year["Born"]
+    Yd, Nd = year["Death"]
 
     fig = plt.figure()
     fig.set_size_inches(12, 4)
@@ -39,43 +67,28 @@ def fig_histogram(dta):
 
 
 def fig_2Dhist(dta, kw=dict()):
-    Born, Death = recover_year(dta)
+    year = recover_year(dta)
+    Yn, Nn = year["Born"]
+    Yd, Nd = year["Death"]
 
-    Yn, Nn = Born
-    Yd, Nd = Death
+    md = Yd[0]
+    mn = Yn[0] 
 
-    md = yd.min()
-    mn = yn.min()
-    D = (yd - md).to_numpy()
-    N = (yn - mn).to_numpy()
-    rd, rn = D.max() + 1, N.max() + 1
+    D = year["data_d"] - md
+    N = year["data_n"] - mn
+    rd, rn = Yd[-1] - md + 1, Yn[-1] - mn + 1
     count = np.bincount(D + N * rd, minlength=rn * rd)
     count = count.reshape(rn, rd).T
-    X, Y = np.arange(mn, mn + rn + 1) - 0.5, np.arange(md, md + rd + 1) - 0.5
 
 
-    kwargs = {
-        "frameon": False,
-        "xmargin": 0,
-        "ymargin": 0,
-    }
+    fig = plt.figure() 
+    fig.set_size_inches(8,8)
+    ax1, ax2, ax3, ax4 = plot_2D(fig)
 
-    fig = plt.figure()
-    fig.set_size_inches(8, 8)
-    ax1 = fig.add_axes((0.1, 0.1, 0.7, 0.7))
-    ax1.set_xlabel("Birth year")
-    ax1.set_ylabel("Death year")
-    ax2 = fig.add_axes((0.1, 0.8, 0.7, 0.18), sharex=ax1, **kwargs)
-    ax3 = fig.add_axes((0.8, 0.1, 0.1, 0.7), sharey=ax1, **kwargs)
-    ax4 = fig.add_axes((0.91, 0.1, 0.02, 0.7))
-
-    plt.setp(ax2.get_xticklabels(), visible=False)
-    plt.setp(ax2.get_yticklabels(), visible=False)
-    plt.setp(ax3.get_xticklabels(), visible=False)
-    plt.setp(ax3.get_yticklabels(), visible=False)
     ax2.bar(Yn, Nn, 1, color="#559")
     ax3.barh(Yd, Nd, 1, color="#644")
 
+    X, Y = np.arange(mn, mn + rn + 1) - 0.5, np.arange(md, md + rd + 1) - 0.5
     cm = ax1.pcolor(X, Y, count, cmap="nipy_spectral", **kw)
     ax1.set_xlim(1891, 2023)
     ax1.set_ylim(1972, 2023)
@@ -164,7 +177,7 @@ fig.savefig("figures/M_year_dist.svg")
 plt.show()
 
 # 2D distributions
-fig = fig_2Dhist(dta)
+fig = fig_2Dhist(dta, kw)
 fig.savefig("figures/M_year_dist_2D.svg")
 plt.show()
 
@@ -176,6 +189,6 @@ fig.savefig("figures/F_year_dist.svg")
 plt.show()
 
 # 2D distributions
-fig = fig_2Dhist(dta)
+fig = fig_2Dhist(dta, kw)
 fig.savefig("figures/F_year_dist_2D.svg")
 plt.show()
