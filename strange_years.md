@@ -34,6 +34,26 @@ It is a work focused on questions, more than answers.
 > 
 > — *Carl Sagan, The Demon-Haunted World: Science as a Candle in the Dark*
 
+
+To all those seemingly insignificant discussions that weave through our lives,
+to the friends who engage with them, and to those who admit their ignorance.
+Thank you to all of you who contributed to this work,
+from the first moment to the long years when it gathered dust in the corners of our minds.
+
+To the countless curious minds that this work has intrigued,
+offering their insights, questions, or simply their presence—thank you.
+To the associations that brought us together, to the Discord conversations that broke our isolation,
+and to the games that united us.
+A special thanks to the association whose name resonates in so many ways within this work:
+**CurieOsity**, whose name intriguingly fits so well with the spirit of this paper.
+
+Finally, thank you Guillaume Beaujard,
+whose curiosity and questions have inspired so many minds.
+Your first question, which started it all,
+along with your enthusiasm, incisive insights,
+and kindness, have been invaluable to this project.
+
+
 ## Brief overview of the dataset
 
 The Data contains the following entries:
