@@ -1,3 +1,10 @@
+# The data
+raw_data/
+*.parquet
+
+# the vim stuff
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

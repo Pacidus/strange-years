@@ -2,7 +2,7 @@
 title: "Strange years"
 author: Yohan Duarte
 date: \today
-geometry: "left=1cm,right=1cm,top=0cm,bottom=2cm"
+geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 ---
 
 # Strange Years
@@ -52,6 +52,8 @@ whose curiosity and questions have inspired so many minds.
 Your first question, which started it all,
 along with your enthusiasm, incisive insights,
 and kindness, have been invaluable to this project.
+
+\newpage
 
 ## Brief Overview of the Dataset
 
