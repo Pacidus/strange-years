@@ -76,12 +76,18 @@ time, as shown in figures figs. 1-3. The impact of the two world wars is
 evident in the reduced number of births during the periods 1915-1919 and
 1940-1945.
 
+<p align='center'>
+
 <figure id="fig:dist">
 <img src="figures/year_dist.svg" class="center" style="height:10.0%"
 alt="Figure 1: Distribution of the years of birth and death in the dataset" />
 <figcaption aria-hidden="true">Figure 1: Distribution of the years of
 birth and death in the dataset</figcaption>
 </figure>
+
+</p>
+
+<p align='center'>
 
 <figure id="fig:M_dist">
 <img src="figures/M_year_dist.svg" class="center" style="height:10.0%"
@@ -90,12 +96,18 @@ alt="Figure 2: Distribution of the years of birth and death for males" />
 birth and death for males</figcaption>
 </figure>
 
+</p>
+
+<p align='center'>
+
 <figure id="fig:F_dist">
 <img src="figures/F_year_dist.svg" class="center" style="height:10.0%"
 alt="Figure 3: Distribution of the years of birth and death for females" />
 <figcaption aria-hidden="true">Figure 3: Distribution of the years of
 birth and death for females</figcaption>
 </figure>
+
+</p>
 
 We can also observe the relationship between birth year and year of
 death in figures figs. 4-6. These figures display a line where the birth
@@ -109,12 +121,18 @@ expectency is shown by this dynamic, as the time goes the crest follows
 curve whose directive coeficient is above 1. Thus the gap between birth
 and death increase.
 
+<p align='center'>
+
 <figure id="fig:2D_dist">
 <img src="figures/year_dist_2D.svg" style="height:25.0%"
 alt="Figure 4: Distributions of year of death given the year of birth" />
 <figcaption aria-hidden="true">Figure 4: Distributions of year of death
 given the year of birth</figcaption>
 </figure>
+
+</p>
+
+<p align='center'>
 
 <figure id="fig:M_2D_dist">
 <img src="figures/M_year_dist_2D.svg" style="height:25.0%"
@@ -123,9 +141,15 @@ alt="Figure 5: Distributions of year of death given the year of birth for males"
 given the year of birth for males</figcaption>
 </figure>
 
+</p>
+
+<p align='center'>
+
 <figure id="fig:F_2D_dist">
 <img src="figures/F_year_dist_2D.svg" style="height:25.0%"
 alt="Figure 6: Distributions of year of death given the year of birth for females" />
 <figcaption aria-hidden="true">Figure 6: Distributions of year of death
 given the year of birth for females</figcaption>
 </figure>
+
+</p>
