@@ -6,7 +6,7 @@ geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
 ulem_styles: true
 
-figureTemplate: <p align="center"> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </p>
+figureTemplate: <p align="center" >$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
 ---
 
 # Strange Years
@@ -74,7 +74,7 @@ Using the years of birth and death, we can plot the distributions over time,
 as shown in figures [@fig:dist; @fig:M_dist; @fig:F_dist].
 The impact of the two world wars is evident in the reduced number of births during the periods 1915-1919 and 1940-1945.
 
-![Distribution of the years of birth and death in the dataset](figures/year_dist.svg){#fig:dist height=10% }
+![Distribution of the years of birth and death in the dataset](figures/year_dist.svg){#fig:dist height=10% align="center"}
 
 ![Distribution of the years of birth and death for males](figures/M_year_dist.svg){#fig:M_dist height=10% }
 

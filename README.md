@@ -78,6 +78,7 @@ evident in the reduced number of births during the periods 1915-1919 and
 
 <figure id="fig:dist">
 <img src="figures/year_dist.svg" style="height:10.0%"
+data-align="center"
 alt=" Figure 1: Distribution of the years of birth and death in the dataset " />
 <figcaption aria-hidden="true"><p align="center"><br />
 Figure 1: Distribution of the years of birth and death in the
