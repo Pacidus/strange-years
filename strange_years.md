@@ -7,7 +7,8 @@ geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
 
 # style="position:absolute; margin-top:-1em;" 
-figureTemplate: <div style="text-align:center;"> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </div>
+figureTemplate: <center> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </center>
+
 ---
 
 # Strange Years
