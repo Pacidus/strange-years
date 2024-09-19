@@ -80,7 +80,7 @@ evident in the reduced number of births during the periods 1915-1919 and
 <img src="figures/year_dist.svg" class="center" style="height:10.0%"
 alt=" Figure 1: Distribution of the years of birth and death in the dataset " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 1: Distribution of the years of birth and death in the
 dataset<br />
 </p></figcaption>
@@ -90,7 +90,7 @@ dataset<br />
 <img src="figures/M_year_dist.svg" class="center" style="height:10.0%"
 alt=" Figure 2: Distribution of the years of birth and death for males " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 2: Distribution of the years of birth and death for males<br />
 </p></figcaption>
 </figure>
@@ -99,7 +99,7 @@ Figure 2: Distribution of the years of birth and death for males<br />
 <img src="figures/F_year_dist.svg" class="center" style="height:10.0%"
 alt=" Figure 3: Distribution of the years of birth and death for females " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 3: Distribution of the years of birth and death for females<br />
 </p></figcaption>
 </figure>
@@ -120,7 +120,7 @@ and death increase.
 <img src="figures/year_dist_2D.svg" style="height:25.0%"
 alt=" Figure 4: Distributions of year of death given the year of birth " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 4: Distributions of year of death given the year of birth<br />
 </p></figcaption>
 </figure>
@@ -129,7 +129,7 @@ Figure 4: Distributions of year of death given the year of birth<br />
 <img src="figures/M_year_dist_2D.svg" style="height:25.0%"
 alt=" Figure 5: Distributions of year of death given the year of birth for males " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 5: Distributions of year of death given the year of birth for
 males<br />
 </p></figcaption>
@@ -139,7 +139,7 @@ males<br />
 <img src="figures/F_year_dist_2D.svg" style="height:25.0%"
 alt=" Figure 6: Distributions of year of death given the year of birth for females " />
 <figcaption
-aria-hidden="true"><p align="center" style="position:absolute; margin-top:-10em;"><br />
+aria-hidden="true"><p align="center" style="position:absolute; padding-top:-10em;"><br />
 Figure 6: Distributions of year of death given the year of birth for
 females<br />
 </p></figcaption>
