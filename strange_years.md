@@ -6,7 +6,7 @@ geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
 ulem_styles: true
 
-figureTemplate: <div align="center"> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </div>
+figureTemplate: <p align="center"> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </p>
 ---
 
 # Strange Years
