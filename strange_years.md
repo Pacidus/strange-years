@@ -4,9 +4,7 @@ author: Yohan Duarte
 date: \today
 geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
-ulem_styles: true
-
-figureTemplate: <p align="center" >$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
+# figureTemplate: <p align="center" >$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
 ---
 
 # Strange Years
