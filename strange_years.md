@@ -4,16 +4,7 @@ author: Yohan Duarte
 date: \today
 geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
-header-includes: |
-  <style>
-  .center {
-    display:block; 
-    float:none; 
-    margin-left:auto;
-    margin-right:auto;
-  }
-  </style>
-# figureTemplate: <p align="center" >$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
+figureTemplate: <p align="center" style="margin-top:0.5cm;">$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
 ---
 
 # Strange Years
