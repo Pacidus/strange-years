@@ -78,27 +78,23 @@ evident in the reduced number of births during the periods 1915-1919 and
 
 <figure id="fig:dist">
 <img src="figures/year_dist.svg" style="height:10.0%"
-alt=" Figure 1: Distribution of the years of birth and death in the dataset " />
-<figcaption aria-hidden="true"><center><br />
-Figure 1: Distribution of the years of birth and death in the
-dataset<br />
-</center></figcaption>
+alt="Figure 1: Distribution of the years of birth and death in the dataset" />
+<figcaption aria-hidden="true">Figure 1: Distribution of the years of
+birth and death in the dataset</figcaption>
 </figure>
 
 <figure id="fig:M_dist">
 <img src="figures/M_year_dist.svg" style="height:10.0%"
-alt=" Figure 2: Distribution of the years of birth and death for males " />
-<figcaption aria-hidden="true"><center><br />
-Figure 2: Distribution of the years of birth and death for males<br />
-</center></figcaption>
+alt="Figure 2: Distribution of the years of birth and death for males" />
+<figcaption aria-hidden="true">Figure 2: Distribution of the years of
+birth and death for males</figcaption>
 </figure>
 
 <figure id="fig:F_dist">
 <img src="figures/F_year_dist.svg" style="height:10.0%"
-alt=" Figure 3: Distribution of the years of birth and death for females " />
-<figcaption aria-hidden="true"><center><br />
-Figure 3: Distribution of the years of birth and death for females<br />
-</center></figcaption>
+alt="Figure 3: Distribution of the years of birth and death for females" />
+<figcaption aria-hidden="true">Figure 3: Distribution of the years of
+birth and death for females</figcaption>
 </figure>
 
 We can also observe the relationship between birth year and year of
@@ -115,26 +111,21 @@ and death increase.
 
 <figure id="fig:2D_dist">
 <img src="figures/year_dist_2D.svg" style="height:25.0%"
-alt=" Figure 4: Distributions of year of death given the year of birth " />
-<figcaption aria-hidden="true"><center><br />
-Figure 4: Distributions of year of death given the year of birth<br />
-</center></figcaption>
+alt="Figure 4: Distributions of year of death given the year of birth" />
+<figcaption aria-hidden="true">Figure 4: Distributions of year of death
+given the year of birth</figcaption>
 </figure>
 
 <figure id="fig:M_2D_dist">
 <img src="figures/M_year_dist_2D.svg" style="height:25.0%"
-alt=" Figure 5: Distributions of year of death given the year of birth for males " />
-<figcaption aria-hidden="true"><center><br />
-Figure 5: Distributions of year of death given the year of birth for
-males<br />
-</center></figcaption>
+alt="Figure 5: Distributions of year of death given the year of birth for males" />
+<figcaption aria-hidden="true">Figure 5: Distributions of year of death
+given the year of birth for males</figcaption>
 </figure>
 
 <figure id="fig:F_2D_dist">
 <img src="figures/F_year_dist_2D.svg" style="height:25.0%"
-alt=" Figure 6: Distributions of year of death given the year of birth for females " />
-<figcaption aria-hidden="true"><center><br />
-Figure 6: Distributions of year of death given the year of birth for
-females<br />
-</center></figcaption>
+alt="Figure 6: Distributions of year of death given the year of birth for females" />
+<figcaption aria-hidden="true">Figure 6: Distributions of year of death
+given the year of birth for females</figcaption>
 </figure>
