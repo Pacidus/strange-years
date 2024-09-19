@@ -9,9 +9,15 @@ if FORMAT:match "gfm" then
     end
     --]]
 
-    function Figcaption (elem)
+    function Figure (elem)
         elem.attributes.style = 'text-align: center; margin:auto; display: block'
+
         return elem 
+    end
+
+    function Image (elem)
+        elem.attributes.style = 'margin:auto; display: block;'
+        return elem
     end
 end
 
