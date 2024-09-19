@@ -77,21 +77,21 @@ evident in the reduced number of births during the periods 1915-1919 and
 1940-1945.
 
 <figure id="fig:dist">
-<img src="figures/year_dist.svg" style="height:10.0%"
+<img src="figures/year_dist.svg" class="center" style="height:10.0%"
 alt="Figure 1: Distribution of the years of birth and death in the dataset" />
 <figcaption aria-hidden="true">Figure 1: Distribution of the years of
 birth and death in the dataset</figcaption>
 </figure>
 
 <figure id="fig:M_dist">
-<img src="figures/M_year_dist.svg" style="height:10.0%"
+<img src="figures/M_year_dist.svg" class="center" style="height:10.0%"
 alt="Figure 2: Distribution of the years of birth and death for males" />
 <figcaption aria-hidden="true">Figure 2: Distribution of the years of
 birth and death for males</figcaption>
 </figure>
 
 <figure id="fig:F_dist">
-<img src="figures/F_year_dist.svg" style="height:10.0%"
+<img src="figures/F_year_dist.svg" class="center" style="height:10.0%"
 alt="Figure 3: Distribution of the years of birth and death for females" />
 <figcaption aria-hidden="true">Figure 3: Distribution of the years of
 birth and death for females</figcaption>
