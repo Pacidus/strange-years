@@ -47,9 +47,9 @@ To the countless curious minds that this work has intrigued, offering
 their insights, questions, or simply their presence—thank you. To the
 associations that brought us together, to the Discord conversations that
 broke our isolation, and to the games that united us. A special thanks
-to the association whose name resonates in so many ways within this
-work: **CurieOsity**, whose name intriguingly fits so well with the
-spirit of this paper.
+to the association **CurieOsity**, whose name resonates in so many ways
+within this work and intriguingly fits so well with the spirit of this
+paper.
 
 Finally, thank you **Guillaume Beaujard**, whose curiosity and questions
 have inspired so many minds. Your first question, which started it all,
