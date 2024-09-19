@@ -1,5 +1,5 @@
 if FORMAT:match "gfm" then
-    function Figure (elem)
+    function Figcaption (elem)
         elem.attributes.style = "margin:auto; display: block;"
         return elem
     end
