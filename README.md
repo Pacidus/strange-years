@@ -1,3 +1,282 @@
+---
+author: Yohan Duarte
+autoEqnLabels: false
+autoSectionLabels: false
+ccsDelim: ", "
+ccsLabelSep:  —
+ccsTemplate: |
+  ``` math
+  i
+  ```
+  ``` math
+  ccsLabelSep
+  ```
+  ``` math
+  t
+  ```
+chapDelim: .
+chapters: false
+chaptersDepth: 1
+codeBlockCaptions: false
+cref: false
+crossrefYaml: pandoc-crossref.yaml
+eqLabels: arabic
+eqnBlockInlineMath: false
+eqnBlockTemplate: |
+  <table>
+  <colgroup>
+  <col style="width: 90%" />
+  <col style="width: 10%" />
+  </colgroup>
+  <tbody>
+  <tr>
+  <td style="text-align: center;"><span
+  class="math display"><em>t</em></span></td>
+  <td style="text-align: right;"><span
+  class="math display"><em>i</em></span></td>
+  </tr>
+  </tbody>
+  </table>
+eqnIndexTemplate: |
+  (
+  ``` math
+  i
+  ```
+  )
+eqnInlineTemplate: |
+  ``` math
+  e
+  ```
+  ``` math
+  equationNumberTeX
+  ```
+  {
+  ``` math
+  i
+  ```
+  }
+eqnPrefix:
+- eq.
+- eqns.
+eqnPrefixTemplate: |
+  ``` math
+  p
+  ```
+   
+  ``` math
+  i
+  ```
+equationNumberTeX: \qquad
+figLabels: arabic
+figPrefix:
+- fig.
+- figs.
+figPrefixTemplate: |
+  ``` math
+  p
+  ```
+   
+  ``` math
+  i
+  ```
+figureTemplate: |
+  <p align="center">  
+  ``` math
+  figureTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  titleDelim
+  ```
+  ``` math
+  t
+  ```
+    
+  </p>
+figureTitle: Figure
+geometry: left=2cm,right=2cm,top=2cm,bottom=3cm
+lastDelim: ", "
+linkReferences: false
+listings: false
+listingTemplate: |
+  ``` math
+  listingTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  titleDelim
+  ```
+  ``` math
+  t
+  ```
+listingTitle: Listing
+listItemTitleDelim: .
+lofItemTemplate: |
+  ``` math
+  lofItemTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  listItemTitleDelim
+  ```
+  ``` math
+  t
+  ```
+    
+lofTitle: |
+  # List of Figures
+lolItemTemplate: |
+  ``` math
+  lolItemTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  listItemTitleDelim
+  ```
+  ``` math
+  t
+  ```
+    
+lolTitle: |
+  # List of Listings
+lotItemTemplate: |
+  ``` math
+  lotItemTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  listItemTitleDelim
+  ```
+  ``` math
+  t
+  ```
+    
+lotTitle: |
+  # List of Tables
+lstLabels: arabic
+lstPrefix:
+- lst.
+- lsts.
+lstPrefixTemplate: |
+  ``` math
+  p
+  ```
+   
+  ``` math
+  i
+  ```
+nameInLink: false
+numberSections: false
+pairDelim: ", "
+rangeDelim: "-"
+refDelim: ", "
+refIndexTemplate: |
+  ``` math
+  i
+  ```
+  ``` math
+  suf
+  ```
+secHeaderDelim:
+secHeaderTemplate: |
+  ``` math
+  i
+  ```
+  ``` math
+  secHeaderDelim[n]
+  ```
+  ``` math
+  t
+  ```
+secLabels: arabic
+secPrefix:
+- sec.
+- secs.
+secPrefixTemplate: |
+  ``` math
+  p
+  ```
+   
+  ``` math
+  i
+  ```
+sectionsDepth: 0
+subfigGrid: false
+subfigLabels: alpha a
+subfigureChildTemplate: |
+  ``` math
+  i
+  ```
+subfigureRefIndexTemplate: |
+  ``` math
+  i
+  ```
+  ``` math
+  suf
+  ```
+  (
+  ``` math
+  s
+  ```
+  )
+subfigureTemplate: |
+  ``` math
+  figureTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  titleDelim
+  ```
+  ``` math
+  t
+  ```
+  .
+  ``` math
+  ccs
+  ```
+tableEqns: false
+tableTemplate: |
+  ``` math
+  tableTitle
+  ```
+  ``` math
+  i
+  ```
+  ``` math
+  titleDelim
+  ```
+  ``` math
+  t
+  ```
+tableTitle: Table
+tblLabels: arabic
+tblPrefix:
+- tbl.
+- tbls.
+tblPrefixTemplate: |
+  ``` math
+  p
+  ```
+   
+  ``` math
+  i
+  ```
+title: Strange years
+titleDelim: ":"
+---
+
 # Strange Years
 
 This project involves parsing and analysing the French “Deceased Persons
