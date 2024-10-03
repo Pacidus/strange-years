@@ -1,7 +1,7 @@
 source_docs=paper/*/*.md
 SOURCE_DOCS := $(wildcard paper/*/*.md)
 
-EXPORTED_DOCS=strange_years.pdf README
+EXPORTED_DOCS=strange_years.pdf README.md
 
 RM=rm
 PANDOC=pandoc
@@ -15,7 +15,7 @@ README=-t gfm
 strange_years.pdf : $(SOURCE_DOCS)
 	$(PANDOC) $(source_docs) $(FILTERS) $(OPTIONS) $(PDF) -o $@ 
 
-README : $(SOURCE_DOCS)
+README.md : $(SOURCE_DOCS)
 	$(PANDOC) $(source_docs) $(FILTERS) $(OPTIONS) $(README) -o $@
 	
 docs: $(EXPORTED_DOCS)
