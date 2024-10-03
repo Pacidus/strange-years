@@ -7,7 +7,7 @@ geometry: "left=2cm,right=2cm,top=2cm,bottom=3cm"
 
 
 # style="position:absolute; margin-top:-1em;" 
-figureTemplate: <center> $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ </center>
+figureTemplate: <p align="center">$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$</p>
 
 ---
 
@@ -94,3 +94,5 @@ as the time goes the crest follows curve whose directive coeficient is above 1. 
 ![Distributions of year of death given the year of birth for males](figures/M_year_dist_2D.svg){#fig:M_2D_dist height=25%}
 
 ![Distributions of year of death given the year of birth for females](figures/F_year_dist_2D.svg){#fig:F_2D_dist height=25%}
+
+
